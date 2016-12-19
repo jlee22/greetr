@@ -27,7 +27,7 @@
     fullName: function() {
       return this.firstName + ' ' + this.lastName;
     },
-
+    // check if valud language
     validate: function() {
       if (supportedLangs.indexOf(this.language) === -1) {
         throw "Invalid language"
@@ -64,7 +64,7 @@
       if (console) {
         console.log(logMessages[this.language] + ': ' + this.fullName());
       }
-
+      // make chainable
       return this;
     },
 
@@ -74,7 +74,7 @@
       this.validate();
 
       return this;
-    }
+    },
 
     HTMLGreeting: function(selector, formal) {
       if (!$) {
@@ -95,18 +95,20 @@
       }
 
       $(selector).html(msg);
-      
+
       return this;
     }
 
   };
-
+  // actualy object created here
   Greetr.init = function(firstName, lastName, language) {
 
     var self = this
     self.firstName = firstName || ''
     self.lastName = lastName || ''
     self.language = language || 'en'
+
+    self.validate();
 
   }
 
