@@ -1,0 +1,17 @@
+(function(global, $) {
+
+  // Setup function so it doesn't use new
+  var Greetr = function(firstName, lastName, language) {
+    return new Greetr.init(firstName, lastName, language);
+  }
+
+  Greetr.init = function(firstName, lastName, language) {
+
+    var self = this
+    self.firstName = firstName || ''
+    self.lastName = lastName || ''
+    self.language = language || 'en'
+
+  }
+
+}(window, jQuery));
