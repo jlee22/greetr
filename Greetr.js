@@ -30,11 +30,11 @@
 
     validate: function() {
       if (supportedLangs.indexOf(this.language) === -1) {
-        thriow "Invalid language"
+        throw "Invalid language"
       }
-    }
+    },
 
-    greeting: function(){
+    greeting: function() {
       return greetings[this.language] + ' ' + this.firstName + '!';
     },
 
