@@ -1,2 +1,2 @@
 var g = G$('John', 'Doe')
-g.greet();
+g.greet().greet(true);
