@@ -19,7 +19,7 @@
 
   var logMessages = {
     en: 'Logged in',
-    es: 'Inició sesión'
+    es: 'Inicio sesion'
   }
 
   Greetr.prototype = {
@@ -73,6 +73,29 @@
 
       this.validate();
 
+      return this;
+    }
+
+    HTMLGreeting: function(selector, formal) {
+      if (!$) {
+        throw 'jQuery not loaded';
+      }
+
+      if (!selector) {
+        throw 'Missing jQuery selector';
+      }
+
+      var msg;
+      if (formal) {
+        msg = this.formalGreeting();
+      }
+
+      else {
+        msg = this.greeting();
+      }
+
+      $(selector).html(msg);
+      
       return this;
     }
 
