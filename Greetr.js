@@ -5,6 +5,8 @@
     return new Greetr.init(firstName, lastName, language);
   }
 
+  Greetr.prototype = {};
+
   Greetr.init = function(firstName, lastName, language) {
 
     var self = this
@@ -13,5 +15,7 @@
     self.language = language || 'en'
 
   }
+
+  Greetr.init.prototype = Greetr.prototype;
 
 }(window, jQuery));
