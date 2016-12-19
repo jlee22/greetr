@@ -5,6 +5,13 @@
     return new Greetr.init(firstName, lastName, language);
   }
 
+  var supportedLangs = ['en', 'es'];
+
+  greetings = {
+    en: 'Hello',
+    es: 'Hola'
+  }
+
   Greetr.prototype = {};
 
   Greetr.init = function(firstName, lastName, language) {
